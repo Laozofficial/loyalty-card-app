@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/photon.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript -->
+    <script src="template-app/js/menu.js" charset="utf-8"></script>
+    <title> Alsultan Supermarket </title>
+</head>
+
+<body>
+    <header class="toolbar toolbar-header">
+        <h1 class="title display-4 bold">ALSULTAN SUPERMARKET</h1>
+        <div class="container">
+            <div class="toolbar-actions">
+                <div class="btn-group">
+
+                    <a href="index.html">
+                        <button class="btn btn-default">
+                            <span class="icon icon-home"></span>
+                        </button>
+                    </a>
+
+                    <a href="card.html">
+                        <button class="btn btn-default ">
+                            <span class="icon icon-folder"></span>
+                        </button>
+                    </a>
+
+                    <a href="log.html">
+                        <button class="btn btn-default  active">
+                            <span class="icon icon-user"></span>
+                        </button>
+                    </a>
+
+
+                    <button class="btn btn-default">
+                        <span class="icon icon-popup"></span>
+                    </button>
+                    <button class="btn btn-default">
+                        <span class="icon icon-shuffle"></span>
+                    </button>
+                </div>
+
+                <button class="btn btn-default">
+                    <span class="icon icon-home icon-text"></span>
+                    Filters
+                </button>
+
+                <button class="btn btn-default btn-dropdown pull-right">
+                    <span class="icon icon-megaphone"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="container">
+        <div class="card z-depth-5 margin">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Logger </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+
+    <script src="template-app/js/jquery.js"></script>
+    <script src="template-app/js/bootstrap.js"></script>
+    <script src="template-app/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>
