@@ -1,25 +1,78 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "devDependencies": {
-    "electron": "^7.1.3"
-  },
-  "dependencies": {
-    "mysql": "^2.17.1"
-  }
+	"name": "loyalty-card-app",
+	"version": "1.0.0",
+	"description": "Alsultan Loyalty System using loyalty cards to reward customers",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron . --disable-gpu --force-cpu-draw",
+		"rebuild": "electron-rebuild -f -w sqlite3",
+		"postinstall": "electron-builder install-app-deps",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder --win --armv71",
+		"build": "electron-packager . --platform=win32 --arch=all --icon='icon-main.ico' --asar --overwrite"
+	},
+	"keywords": [
+		"al sultan",
+		"supermarket",
+		"loyalty system",
+		"loyalty card",
+		"stores"
+	],
+	"make_targets": {
+		"win32": [
+			"squirrel"
+		],
+		"darwin": [
+			"zip",
+			"dmg"
+		],
+		"linux": [
+			"deb",
+			"rpm",
+			"flatpak",
+			"snap"
+		]
+	},
+	"build": {
+		"appId": "ellison-corp-loyalty-card-app",
+		"dmg": {
+			"contents": [
+				{
+					"x": 110,
+					"y": 150
+				},
+				{
+					"x": 240,
+					"y": 150,
+					"type": "link",
+					"path": "/Applications"
+				}
+			]
+		},
+		"linux": {
+			"target": [
+				"AppImage",
+				"deb"
+			]
+		},
+		"win": {
+			"target": "NSIS",
+			"icon": "icon-main.png"
+		}
+	},
+	"author": "GitHub",
+	"license": "CC0-1.0",
+	"devDependencies": {
+		"electron": "^7.1.3",
+		"electron-builder": "^21.2.0",
+		"electron-rebuild": "^1.8.8",
+		"eslint": "^6.7.2"
+	},
+	"dependencies": {
+		"electron-packager": "^14.1.1",
+		"electron-store": "^5.1.0",
+		"knex": "^0.20.4",
+		"mysql": "^2.17.1",
+		"sqlite3": "^4.1.1"
+	}
 }

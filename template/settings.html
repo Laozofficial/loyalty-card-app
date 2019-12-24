@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!-- Javascript -->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="card mt-3">
+				<div class="card-body">
+					<form>
+						<div class="form-group">
+							<label>Amount purchased/Point </label>
+							<input type="number" id="amount_per_point" class="form-control" />
+						</div>
+						<br />
+						<strong>Database Settings</strong>
+						<hr />
+						<div class="row">
+							<div class="form-group col-4">
+								<label>Host</label>
+								<input type="text" id="host" class="form-control" />
+							</div>
+							<div class="form-group col-4">
+								<label>Port</label>
+								<input
+									type="number"
+									min="1"
+									max="65535"
+									id="port"
+									class="form-control"
+								/>
+							</div>
+							<div class="form-group col-4">
+								<label>Database</label>
+								<input type="text" id="database" class="form-control" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-6">
+								<label>User</label>
+								<input type="text" id="user" class="form-control" />
+							</div>
+							<div class="form-group col-6">
+								<label>Password</label>
+								<input type="text" id="password" class="form-control" />
+							</div>
+						</div>
+
+						<button type="submit" class="btn btn-primary float-right">Save</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="../js/settings.js"></script>
+	</body>
+</html>

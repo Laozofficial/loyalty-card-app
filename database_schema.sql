@@ -1,0 +1,17 @@
+CREATE DATABASE loyaltydb;
+
+CREATE USER 'loyalty'@'%' IDENTIFIED BY 'loyalty@4400';
+
+GRANT ALL PRIVILEGES ON loyaltydb.* TO 'loyalty'@'%';
+
+CREATE TABLE `users`
+( `id` INTEGER PRIMARY KEY AUTO_INCREMENT, `barcode` VARCHAR
+(100) NOT NULL UNIQUE, `name` VARCHAR
+(200) NOT NULL, `email` VARCHAR
+(100), `phone` VARCHAR
+(100), `loyalty_points` INTEGER NOT NULL DEFAULT 0, `backed_up` INTEGER DEFAULT 0, `created_at` VARCHAR
+(100) NOT NULL, `updated_at` VARCHAR
+(100) NOT NULL);
+
+
+CREATE TABLE `loyalty_points_logs` (`id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT, `user_id` INTEGER NOT NULL, `amount` INTEGER NOT NULL, `points` INTEGER NOT NULL, `status` INTEGER NOT NULL, `backed_up` INTEGER NOT NULL DEFAULT 0, `created_at` VARCHAR(100) NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE);

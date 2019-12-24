@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!-- Javascript -->
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="card mt-3">
+				<div class="card-body">
+					<h2>Al-Sultan Loyalty System</h2>
+					<strong>v1.0.0</strong>
+					<p>
+						This is a mini loyalty system that maintains loyalty points of clients in
+						Al-Sultan supermarket & Stores
+					</p>
+					<h5>Usage Guide</h5>
+					<ul class="usage-guide">
+						<li>
+							Add new user in File > Add User with barcode, name and other optional
+							fields
+						</li>
+						<li>
+							Open the settings in File > Settings and setup amount per loyalty point
+						</li>
+						<li>
+							In the Home menu (File > Home), scan user barcode and enter amount
+							purchased in store to add Loyalty points. The calculation is (amount
+							purchased)/(amount per loyalty point).
+						</li>
+						<li>
+							To redeem loyalty points go to File > Redeem points and scan user
+							bardcode. Then enter the amount to redeem which must be less than the
+							amount of points the user has.
+						</li>
+					</ul>
+
+					<hr />
+					<div class="text-center">
+						Developed by
+						<a href="http://www.ellisoncorp.com.ng" target="_blank">Ellison Corp.</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/adduser.js"></script>
+	</body>
+</html>

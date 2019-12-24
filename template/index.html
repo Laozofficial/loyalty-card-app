@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<meta
+			http-equiv="X-Content-Security-Policy"
+			content="default-src 'self'; script-src 'self'"
+		/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../css/photon.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="../css/bootstrap-reboot.css" />
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+
+		<!--CSS Vex -->
+		<link rel="stylesheet" href="../css/vex/vex.css" />
+		<link rel="stylesheet" href="../css/vex/vex-theme-plain.css" />
+
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!-- Javascript -->
+		<title>Al-Sultan Loyalty System</title>
+	</head>
+
+	<body>
+		<div id="main-body" class="body pt-10">
+			<div class="container">
+				<div id="home" class="card center z-depth-5">
+					<div class="card-body">
+						<h5 class="card-title text-center">Scan Barcode</h5>
+						<form class="add-points-form">
+							<div class="form-group">
+								<label>Barcode </label>
+								<input type="number" id="barcode" class="form-control" autofocus />
+							</div>
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" id="name" class="form-control" readonly />
+							</div>
+							<div class="form-group">
+								<label>Amount</label>
+								<input type="number" id="amount" class="form-control" />
+							</div>
+							<div class="text-center">
+								<button type="submit" id="add-points" class="btn btn-primary">
+									Add Point
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div id="redeem-points" class="card center z-depth-5">
+					<div class="card-body">
+						<h5 class="card-title text-center">Scan Barcode</h5>
+						<form class="redeem-points-form">
+							<div class="form-group">
+								<label>Barcode </label>
+								<input
+									type="number"
+									id="red-barcode"
+									class="form-control"
+									autofocus
+								/>
+							</div>
+							<div class="row">
+								<div class="form-group col-sm-6">
+									<label>Name</label>
+									<input
+										type="text"
+										id="red-name"
+										class="form-control"
+										readonly
+									/>
+								</div>
+								<div class="form-group col-sm-6">
+									<label>Loyalty Points</label>
+									<input
+										type="number"
+										id="red-loyalty-points"
+										class="form-control"
+										readonly
+									/>
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Redeem Amount</label>
+								<input type="number" id="red-amount" class="form-control" />
+							</div>
+							<div class="text-center">
+								<button type="submit" id="red-points" class="btn btn-primary">
+									Redeem Point
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div id="users" class="card center-lg z-depth-5">
+					<div class="card-header">
+						Users
+						<form class="search-form">
+							<input
+								class="form-control"
+								placeholder="Search term..."
+								id="search-term"
+							/>
+							<button class="btn btn-primary">
+								<i class="fa fa-search"></i>
+							</button>
+						</form>
+					</div>
+					<div class="card-body table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Barcode</th>
+									<th>Full Name</th>
+									<th>Email</th>
+									<th>Phone</th>
+									<th>Loyalty Points</th>
+									<th>Created At</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody id="users-table-body"></tbody>
+						</table>
+					</div>
+				</div>
+
+				<div id="logs" class="card center-lg z-depth-5">
+					<div class="card-header">
+						Loyalty Point Logs
+						<!-- <form class="search-form">
+						<input class="form-control" placeholder="Search term..." id="search-term" />
+						<button class="btn btn-primary">
+							<i class="fa fa-search"></i>
+						</button>
+					</form> -->
+					</div>
+					<div class="card-body table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>S/N</th>
+									<th>User</th>
+									<th>Amount</th>
+									<th>Loyalty Points</th>
+									<th>Status</th>
+									<th>Created At</th>
+								</tr>
+							</thead>
+							<tbody id="logs-table-body"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="item"><i class="fa fa-users"></i><span class="user-count">0</span></div>
+			<div class="item"><i class="fa fa-list"></i><span class="log-count">0</span></div>
+			<div class="item float-right">
+				<i class="fa fa-bolt"></i><span class="connection">Disconnected</span>
+			</div>
+			<div class="item float-right">
+				<i class="fa fa-money"></i>
+				<span>&#8358;<span class="amount-per-point">0</span> per point</span>
+			</div>
+		</div>
+
+		<!-- jquery
+		============================================ -->
+		<script src="../js/jquery/jquery-1.12.4.min.js"></script>
+		<!--  notification JS  -->
+		<script src="../js/notification/bootstrap-growl.min.js"></script>
+		<script src="../js/notification/notification-active.js"></script>
+		<!-- Vex -->
+		<script src="../js/vex/vex.combined.min.js"></script>
+		<!-- You can also require other files to run in this process -->
+		<script src="../js/index.js"></script>
+	</body>
+</html>

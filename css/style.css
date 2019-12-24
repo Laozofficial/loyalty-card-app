@@ -1,26 +1,109 @@
 .center {
-    margin: auto;
-    width: 70%;
-    border: 3px solid;
-    padding: 10px;
-    margin-top: 10%;
+	margin: auto;
+	width: 60%;
+	padding: 10px;
+}
+
+.center-lg {
+	margin: auto;
+	width: 95%;
+	padding: 10px;
 }
 
 .z-depth-5 {
-    -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+		0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12),
+		0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .bold {
-    font-weight: bolder;
+	font-weight: bolder;
 }
 
-body,
-html {
-    background-image: url('file://images/bg.jpg') no-repeat center center fixed !important;
-    background-size: cover;
+.body {
+	background-image: url("../images/bg.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position-x: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+.pt-10 {
+	padding-top: 10%;
+}
+
+.pt-5 {
+	padding-top: 5%;
 }
 
 .margin {
-    margin-top: 10%;
+	margin-top: 10%;
+}
+
+.form-error {
+	color: red;
+}
+
+.card-header {
+	border: 1px solid lightgray;
+	font-weight: bold;
+}
+
+.search-form {
+	width: 300px;
+	float: right;
+	margin-top: -7px;
+}
+
+.search-form .form-control {
+	max-width: 250px;
+	display: inline-block;
+}
+
+.search-form .btn {
+	display: inline-block;
+	margin-bottom: 6px;
+}
+
+.btn-sm {
+	padding: 2px 5px;
+}
+
+.alert-sm {
+	padding: 2px;
+}
+
+#main-body {
+	overflow: auto;
+	padding-bottom: 20px;
+}
+
+.usage-guide {
+	font-size: 13px;
+}
+
+#logs {
+	margin-bottom: 50px;
+}
+
+.footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	background: #b60600;
+	padding: 2px 10px 3px 10px;
+	font-size: 13px;
+}
+
+.footer .item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer .item > span {
+	margin-left: 5px;
 }

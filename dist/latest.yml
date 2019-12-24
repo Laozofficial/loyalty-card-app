@@ -1,0 +1,8 @@
+version: 1.0.0
+files:
+  - url: loyalty-card-app-Setup-1.0.0.exe
+    sha512: 3LnU1gPErR7msyy7aRPnbQwkuKuZ+8NHGavFFsF+8RKs1Ts+QHvgJGcMNZYtGCqI7X5gSBjfC0tQVTiMY4MXBg==
+    size: 59648769
+path: loyalty-card-app-Setup-1.0.0.exe
+sha512: 3LnU1gPErR7msyy7aRPnbQwkuKuZ+8NHGavFFsF+8RKs1Ts+QHvgJGcMNZYtGCqI7X5gSBjfC0tQVTiMY4MXBg==
+releaseDate: '2019-12-19T03:25:32.603Z'
